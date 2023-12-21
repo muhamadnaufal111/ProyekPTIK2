@@ -90,3 +90,42 @@ void hapusData() {
         system("cls");
     }
 }
+
+void editData() {
+    int nomorEdit;
+    cout << "Masukkan Nomor Data yang Akan Diedit : ";
+    cin >> nomorEdit;
+
+    if (nomorEdit >= 1 && nomorEdit <= jumlahData) {
+        --nomorEdit;
+        cout << "No Rekam Medis   : ";
+        cin >> pasien[nomorEdit].no_rekam_medis;
+        cout << "Nama Pasien      : ";
+        cin >> pasien[nomorEdit].nama_pasien;
+        cout << "Tanggal Lahir    : ";
+        cin >> pasien[nomorEdit].tanggal_lahir;
+        cout << "Usia             : ";
+        cin >> pasien[nomorEdit].usia;
+        cout << "Jenis Kelamin    : ";
+        cin >> pasien[nomorEdit].jenis_kelamin;
+        cout << "No Telepon       : ";
+        cin >> pasien[nomorEdit].no_telepon;
+        cout << "Berat Badan      : ";
+        cin >> pasien[nomorEdit].berat_badan;
+        cout << "Tinggi Badan     : ";
+        cin >> pasien[nomorEdit].tinggi_badan;
+        cout << "Keluhan Utama    : ";
+        cin >> pasien[nomorEdit].keluhan_utama;
+        cout << "Tanggal Masuk    : ";
+        cin >> pasien[nomorEdit].tanggal_masuk;
+        cout << "Alamat           : ";
+        cin >> pasien[nomorEdit].alamat;
+
+        tampilkanData();
+    } else {
+        system("cls");
+        cout << "Nomor data tidak valid.";
+        getch();
+        system("cls");
+    }
+}
