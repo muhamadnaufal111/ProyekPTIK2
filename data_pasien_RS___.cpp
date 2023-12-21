@@ -65,3 +65,28 @@ void tampilkanData() {
     getch(); // Menunggu sampai tombol ditekan
     system("cls");
 }
+
+void hapusData() {
+    int nomorHapus;
+    cout << "Hapus data ke-";
+    cin >> nomorHapus;
+
+    if (nomorHapus >= 1 && nomorHapus <= jumlahData) {
+        --nomorHapus;
+
+        for (int i = nomorHapus; i < jumlahData - 1; ++i) {
+            pasien[i] = pasien[i + 1];
+        }
+
+        --jumlahData;
+        system("cls");
+        cout << "\n\n\n\n\n\n\n\n\n++++++++++++++++++++++++++++++ Data ke-" << nomorHapus + 1 << " Terhapus ++++++++++++++++++++++++++++++";
+        getch();
+        system("cls");
+    } else {
+        system("cls");
+        cout << "Nomor data tidak valid.";
+        getch();
+        system("cls");
+    }
+}
